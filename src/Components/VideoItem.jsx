@@ -1,8 +1,8 @@
-import './VideoItem.css'
+import "./VideoItem.css";
 
 const VideoItem = ({ video, onVideoSelect }) => {
   return (
-    <div onClick={ () => onVideoSelect(video)  } className="video-item item">
+    <div onClick={() => onVideoSelect(video)} className="video-item item">
       <img
         className="image ui"
         src={video.snippet.thumbnails.medium.url}
@@ -15,4 +15,4 @@ const VideoItem = ({ video, onVideoSelect }) => {
   );
 };
 
-export default VideoItem
+export default VideoItem;
