@@ -1,6 +1,6 @@
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div className="ui segment">...</div>;
+    return <div></div>;
   }
 
   return (

@@ -27,13 +27,22 @@ class App extends React.Component {
     return (
       <div className="ui container">
         <SearchBar onFormSubmit={this.onTermSubmit} />
-         <VideoDetail video={this.state.selectedVideo}/>
-        {/* call-back function as prop to get the search term from the searchbar */}
-        <VideoList
-          videos={this.state.videos}
-          onVideoSelect={this.onVideoSelect}
-        />
-       
+
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+            <VideoDetail video={this.state.selectedVideo}/>
+            {/* call-back function as prop to get the search term from the searchbar */}
+            </div>
+            <div className="five wide column">
+            <VideoList
+              videos={this.state.videos}
+              onVideoSelect={this.onVideoSelect}
+            />
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   }
