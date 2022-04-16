@@ -1,6 +1,10 @@
-const VideoItem = (props) => {
+const VideoItem = ({ video }) => {
    return(
-      <div>Video Item</div>
+      <div>
+         <h3>{video.snippet.title}</h3>
+         <img src={video.snippet.thumbnails.medium.url} alt="" />
+         <br />
+      </div>
    )
 }
 
