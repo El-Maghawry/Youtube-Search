@@ -1,7 +1,9 @@
-const VideoList = props =>{
-   // props.videos
-   return (
-      <div>{props.videos.length}</div>
-   )
+import VideoItem from "./VideoItem"
+
+const VideoList = ({ videos }) =>{
+   const renderedList = videos.map( video => {
+      return <VideoItem/>
+   })
+   return <div>{ renderedList }</div>
 }
 export default VideoList
