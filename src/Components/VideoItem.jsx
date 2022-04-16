@@ -1,11 +1,18 @@
-const VideoItem = ({ video }) => {
-   return(
-      <div>
-         <h3>{video.snippet.title}</h3>
-         <img src={video.snippet.thumbnails.medium.url} alt="" />
-         <br />
-      </div>
-   )
-}
+import './VideoItem.css'
 
-export default VideoItem
+const VideoItem = ({ video }) => {
+  return (
+    <div className="video-item item">
+      <img
+        className="image ui"
+        src={video.snippet.thumbnails.medium.url}
+        alt=""
+      />
+      <div className="content">
+        <div className="header">{video.snippet.title}</div>
+      </div>
+    </div>
+  );
+};
+
+export default VideoItem;
